@@ -7,5 +7,6 @@ html
 		h1 Hello, please sign up
 		div.container
 			form(action="/google-view" method="GET")
-				input(type="text" placeholder="Your name")
+				input(type="text" name="name" placeholder="Your name")
 				button(type="submit") Submit
+				p.warning #{warning ? 'Wrong data!' : ''}

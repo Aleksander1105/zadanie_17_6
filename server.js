@@ -6,31 +6,27 @@ app.set('views', './views');
 
 app.use(express.static('assets'));
 
-app.use('/store', function(req, res, next) {
-	console.log('Jestem pośrednikiem przy żądaniu /store');
-	next();
-});
-
 app.get('/', function(req, res) {
-	res.send('Hello world!');
-})
-
-app.get('/store', function(req, res) {
-	res.send('To jest sklep');
-});
-
-app.get('/dynamic-view', function(req, res) {
-	res.render('dynamic-view', {
-		user: {name: "Aleksander"},
-		link: '/google-view'
-	});
+	res.render('dynamic-view');
 });
 
 app.get('/google-view', function(req, res) {
-	res.render('google-view', {
-		user: {name: "Aleksander"}
-	});
+	let warning = true;
+	if (req.query.name) {
+		warning = false;
+		const data = {
+			name: req.query.name
+		}
+		res.render('google-view', {
+			name: data.name
+		});	
+	} else {
+		res.render('dynamic-view', {
+			warning: warning
+		})
+	}
 });
+
 
 app.listen(3000);
 app.use(function(req, res, next) {
