@@ -1,0 +1,11 @@
+doctype html
+html
+	head
+		title Hello!
+		include ./head.pug
+	body 
+		h1 Hello, please sign up
+		div.container
+			form(action="/google-view" method="GET")
+				input(type="text" placeholder="Your name")
+				button(type="submit") Submit
