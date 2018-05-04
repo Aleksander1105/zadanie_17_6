@@ -1,0 +1,25 @@
+{
+  "name": "zadanie_17_6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksander1105/zadanie_17_6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksander1105/zadanie_17_6/issues"
+  },
+  "homepage": "https://github.com/Aleksander1105/zadanie_17_6#readme",
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "pug": "^2.0.3"
+  }
+}
